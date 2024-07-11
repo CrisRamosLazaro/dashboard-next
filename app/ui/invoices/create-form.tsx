@@ -133,11 +133,10 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               ))}
           </div>
           <div id="general-error" aria-live="polite" aria-atomic="true">
-            {state.errors ?
+            {state.message &&
               <p className="mt-2 text-sm text-red-500">
-                Missing fields. Failed to create invoice.
+                {state.message}
               </p>
-              : ''
             }
           </div>
         </fieldset>
